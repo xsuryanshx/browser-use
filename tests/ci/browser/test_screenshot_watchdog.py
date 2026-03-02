@@ -88,7 +88,7 @@ class TestScreenshotWatchdog:
 		watchdog = ScreenshotWatchdog(browser_session=browser_session, event_bus=event_bus)
 
 		# Create a ScreenshotEvent with clip option
-		clip = {'x': 0, 'y': 0, 'width': 100, 'height': 100}
+		clip: dict[str, float] = {'x': 0.0, 'y': 0.0, 'width': 100.0, 'height': 100.0}
 		event = ScreenshotEvent(clip=clip)
 
 		# Without active browser, should raise
